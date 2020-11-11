@@ -1,4 +1,6 @@
-const connection = require("./connection")
+var connection = require("../config/connection.js");
+
+
 
 //Methods//
 
