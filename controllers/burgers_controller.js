@@ -1,8 +1,8 @@
-const express = require("express");
+var express = require("express");
 
-const burger = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
-const router = express.Router();
+var router = express.Router();
 
 
 //create the router for the app, and export the router at end of file
@@ -11,14 +11,22 @@ const router = express.Router();
 
 router.get("/", function(req, res){
     burger.selectAll(function(data){
-        const burgObj = {
+        var burgObj = {
             burgers: data
         };
 
         console.log(burgObj);
         res.render("index", burgObj);
     });
-})
+});
+
+router.post("/api/burgers", function(req, res){
+
+    console.log(req.body.name);
+     burger.insertOne(["burger_name"] , [req.body.name], function(result){
+        res.json({result});
+    }); 
+});
 
 
 
