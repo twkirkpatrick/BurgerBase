@@ -9,6 +9,17 @@ const router = express.Router();
 
 //ROUTES GO HERE//
 
+router.get("/", function(req, res){
+    burger.selectAll(function(data){
+        const burgObj = {
+            burgers: data
+        };
+
+        console.log(burgObj);
+        res.render("index", burgObj);
+    });
+})
+
 
 
 
