@@ -32,6 +32,15 @@ $(function(){
         });
     });
 
+    $("#clear").on("click", function(){
+        $.ajax("/api/burgers", {
+            type: "DELETE"
+        }).then(function(){
+            console.log("burgers deleted!")
+            location.reload();
+        })
+    })
+
 
 
 

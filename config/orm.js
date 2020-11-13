@@ -60,9 +60,14 @@ var orm = {
 
             cb(result);
         })
-
-
-    }  
+    },
+    deleteAll: function(table, cb){
+      var query = `DELETE FROM ${table};`
+      connection.query(query, function(err, results){
+        if (err) throw err;
+        cb(results);
+      })
+    }
 }
 
 //Methods//

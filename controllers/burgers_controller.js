@@ -43,6 +43,12 @@ router.put("/api/burgers/:id", function(req, res){
     )
 })
 
+router.delete("/api/burgers", function(req, res){
+    burger.deleteAll(function(data){
+        res.json("burgers deleted");
+    })
+})
+
 
 
 
