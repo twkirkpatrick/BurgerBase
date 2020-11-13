@@ -1,34 +1,57 @@
-<h1>Burgers!</h1>
 
-<h2>Eat These Burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      <li>
-        {{this.id}}. {{this.burger_name}}
-        <button data-id = "{{this.id}}" data-devoured = "true" class="devour">Devour!</button>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers in yo stomach</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      <li>{{this.id}}. {{this.burger_name}}</li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Submit A Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burg-input">Burger name:</label>
-    <input type="text" id="burg-input" name="name">
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <img src="assets/img/burger.jpg" alt="burger" id= "burger-img">
+    </div>
   </div>
-  <button type="submit">Submit</button>
-</form>
+  <div class="row">
+    <div class="col-sm-6 text-center">
+      <h2>Eat These Burgers!</h2>
+      <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          <li>
+            {{!-- {{this.id}}. --}} {{this.burger_name}}
+            <button data-id = "{{this.id}}" data-devoured = "true" class="devour btn-warning btn-sm">Devour!</button>
+          </li>
+        {{/unless}}
+      {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm-6 text-center">
+      <h2>Burgers in yo stomach</h2>
+
+        <ul>
+          {{#each burgers}}
+            {{#if devoured}}
+              <li>{{!-- {{this.id}}. --}} {{this.burger_name}}</li>
+            {{/if}}
+          {{/each}}
+        </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+        <h2>Submit A Burger</h2>
+        <form class="create-form">
+
+          <div class="form-group">
+            <input type="text" id="burg-input" name="name">
+          </div>
+          <button type="submit" class="btn-success btn">Submit</button>
+          <button type = "reset" class = "btn-danger btn" id = "clear">Clear Burgers</button>
+        </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
