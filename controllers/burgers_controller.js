@@ -1,8 +1,10 @@
-var express = require("express");
+const express = require("express");
 
-var burger = require("../models/burger.js");
+const burger = require("../models/burger.js");
 
-var router = express.Router();
+const router = express.Router();
+
+
 
 
 //create the router for the app, and export the router at end of file
@@ -11,13 +13,15 @@ var router = express.Router();
 
 router.get("/", function(req, res){
     burger.selectAll(function(data){
-        var burgObj = {
+        let burgObj = {
             burgers: data
         };
 
         console.log(burgObj);
         res.render("index", burgObj);
     });
+
+    
 });
 
 router.post("/api/burgers", function(req, res){
@@ -28,7 +32,7 @@ router.post("/api/burgers", function(req, res){
 });
 
 router.put("/api/burgers/:id", function(req, res){
-    var condition = "id = " + req.params.id;
+    let condition = "id = " + req.params.id;
     burger.updateOne(
         {
             devoured: req.body.isdevoured

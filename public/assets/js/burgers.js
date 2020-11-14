@@ -3,7 +3,7 @@ $(function(){
     $(".create-form").on("submit", function(event){
         event.preventDefault();
 
-        var newBurger =  {
+        let newBurger =  {
             name : $("#burg-input").val().trim()
         
         };
@@ -17,9 +17,9 @@ $(function(){
     });
 
     $(".devour").on("click", function(){
-        var id = $(this).data("id");
+        let id = $(this).data("id");
 
-        var newDevour = {
+        let newDevour = {
             isdevoured: $(this).data("devoured")
         };
 
@@ -40,17 +40,5 @@ $(function(){
             location.reload();
         })
     })
-
-
-
-
-
-
-
-
-
-
-
-
 
 })

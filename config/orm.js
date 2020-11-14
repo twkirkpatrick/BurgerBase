@@ -1,10 +1,10 @@
-var connection = require("../config/connection.js");
+const connection = require("../config/connection.js");
 
 
 function printQuestionMarks(num) {
-    var arr = [];
+    let arr = [];
   
-    for (var i = 0; i < num; i++) {
+    for (let i = 0; i < num; i++) {
       arr.push("?");
     }
   
@@ -12,11 +12,11 @@ function printQuestionMarks(num) {
   }
 
   function objToSql(ob) {
-    var arr = [];
+    let arr = [];
   
     // loop through the keys and push the key/value as a string int arr
-    for (var key in ob) {
-      var value = ob[key];
+    for (let key in ob) {
+      let value = ob[key];
       // check to skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)) {
         // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
@@ -36,7 +36,7 @@ function printQuestionMarks(num) {
 
 var orm = {
     selectAll: function(table, cb){
-        var query = `SELECT * FROM ${table};`
+        let query = `SELECT * FROM ${table};`
         connection.query(query, function(err, results){
             if (err) throw err;
 
@@ -44,7 +44,7 @@ var orm = {
         })
     } ,
     insertOne: function(table, cols, val, cb){
-        var query = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(val.length)})`;
+        let query = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(val.length)})`;
 
         connection.query(query, val, function(err, results){
             if (err) throw err;
@@ -52,7 +52,7 @@ var orm = {
         })
     } ,
     updateOne: function(table, objColVals, condition, cb){
-        var query = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
+        let query = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
         console.log(query);
 
         connection.query(query, function(err, result){
@@ -62,7 +62,7 @@ var orm = {
         })
     },
     deleteAll: function(table, cb){
-      var query = `DELETE FROM ${table};`
+      let query = `DELETE FROM ${table};`
       connection.query(query, function(err, results){
         if (err) throw err;
         cb(results);
