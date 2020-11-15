@@ -5,7 +5,7 @@ An application used to log your burgers!  Built with Node.js, Express, MySQL, Ha
 
 <img src = "public/assets/img/base.png" alt="screenshot of burgerbase">
 
-View the deployed application here <a href = "https://warm-atoll-97032.herokuapp.com/">here</a>
+View the deployed application <a href = "https://warm-atoll-97032.herokuapp.com/">here</a>
 
 ## Table of Contents
 * [Installation](#installation)
@@ -28,7 +28,7 @@ If you would like to use the application in your local environment:
 
 5. Run command ```node server``` to get started
 
-Otherwise, visit the deployed application here <a href = "https://warm-atoll-97032.herokuapp.com/">here</a>
+Otherwise, visit the deployed application <a href = "https://warm-atoll-97032.herokuapp.com/">here</a>
 
 ## Usage
 Type in a burger in the input field to add the burger to the list and click the "devour" button to devour it!  Use the "Clear Burgers" button to start from scratch.
