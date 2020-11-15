@@ -3,6 +3,8 @@
 
 An application used to log your burgers!  Built with Node.js, Express, MySQL, Handlebars, and ORM.
 
+<img src = "public/assets/img/base.png" alt="screenshot of burgerbase">
+
 View the deployed application here <a href = "https://warm-atoll-97032.herokuapp.com/">here</a>
 
 ## Table of Contents
@@ -21,28 +23,22 @@ View the deployed application here <a href = "https://warm-atoll-97032.herokuapp
 If you would like to use the application in your local environment: 
 1. Clone the repo
 2. Install required dependencies by running command ```npm i```
-3. Use ```schema.sql``` file to insert tables into MySQL
-4. Edit ```connection.js``` file to match your MySQL credentials
-4. Run command ```node server``` to get started
+3. Edit ```connection.js``` file to match your MySQL credentials
+4. Use ```schema.sql``` file to insert tables into MySQL
+
+5. Run command ```node server``` to get started
 
 Otherwise, visit the deployed application here <a href = "https://warm-atoll-97032.herokuapp.com/">here</a>
 
 ## Usage
 Type in a burger in the input field to add the burger to the list and click the "devour" button to devour it!  Use the "Clear Burgers" button to start from scratch.
 
-## Screenshots
-<img src = "images/alliance-main.png" alt = "screenshot of alliance">
-<img src = "images/alliance-view.png" alt = "screenshot of alliance">
-<img src = "images/alliance-roles.png" alt = "screenshot of alliance">
-<img src = "images/alliance-add.png" alt = "screenshot of alliance">
-
-
 ## Resources
 **Node.js** <br>
 **MySQL** <br>
 **Handlebars** <br>
-**Express**
-**Bootstrap**
+**Express** <br>
+**Bootstrap** <br>
 **Object Relational Mapping** (ORM) <br>
 **Font Awesome** <br>
 **Google Fonts**
